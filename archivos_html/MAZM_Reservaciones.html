@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/estilos.css">
+    <link rel="stylesheet" href="../assets/estilos_admin.css">
+    <link rel="shortcut icon" href="../assets/images/icono-alas-de-america.png">
+    <title>Reservaciones</title>
+</head>
+<body>
+   
+    
+
+    <header>
+        <div class="logo">
+            <img src="../assets/images/icons8-aviones-64.png">
+            <h2>Estas a un paso de hacer tu sueño realidad :) !!</h2>
+        </div>
+        <nav>
+            <a href="MAZM_Menu_Principal.html" class="nav-link">Home</a>
+        </nav>
+    </header>
+    
+<div class="formulario-registro">
+    <section>
+    <form action="../archivos_php/validacion_datos_cliente.php" method="POST">
+        <h4>DATOS DE LA RESERVACIÓN</h4>
+        <input id="nombre" class="controls" type="text" name="fila[nombre]"  placeholder="nombre(s)" >
+        <input id="vocalApellidoPaterno" class="controls" type="text" name="apellido_paterno"  placeholder="apellido_paterno" >
+        <input id="vocalApellidoMaterno" class="controls" type="text" name="apellido_materno" placeholder="apellido_materno" >
+        <input id="fechaNac" class="controls" type="text" name="fecha_nacimiento"  placeholder="fecha_nacimiento" >
+        <input id="entFed" class="controls" type="text" name="entidad_federativa"  placeholder="entidad_federativa" >
+        <input id="sexo" class="controls" type="text" name="sexoHM"  placeholder="sexo" >
+        <input class="controls" type="text" name="rfc" placeholder="rfc" >
+        <input id="miInput" href="../archivos_html/MAZM_Pag_Mantenimiento.html" onclick="setearMensaje();" class="controls" type="text" name="curp" placeholder="curp">
+        
+
+        <input class="botonsAlta" type="submit" name="buttonAlta">
+    </form>
+    </section>    
+</div>    
+    <footer class="footer">
+
+        &copy; MAZM - PW1 - 2024 - 05 - 05
+    </footer>
+
+    <script src="../assets/archivos_js/curp.js"></script>
+</body>
+</html>

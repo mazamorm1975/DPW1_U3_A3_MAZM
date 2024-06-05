@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+  }
+  body {
+    background: #fff;
+    color: white;
+    font-family: sans-serif;
+  }
+  
+  .formulario-registro{
+    display: contents;
+    justify-items: center;
+    width: 30%;
+    padding: 30px;
+    padding-top: 40px;
+    margin-right: 80px;
+    border-radius: 4px; 
+    font-family: 'calibri';
+}
+
+  form {
+    width: 500px;
+    margin: auto;
+    background: #ddd;
+    padding: 20px;
+    margin-top: 5px;
+    color: black;
+    border: 1px solid black;
+  }
+  h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 0;
+  }
+  label, input,select {
+    width: 100%;
+    display: block;
+    font-size: 15px;
+  }
+  input, select {
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  input[type="submit"] {
+    width: 30%;
+    margin: auto;
+    background: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  .error {
+    color: red;
+  }

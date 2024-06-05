@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/estilos.css">
+    <link rel="stylesheet" href="../assets/estilos_formulario_cot_aerea.css">
+    <link rel="stylesheet" href="../assets/estilos_admin.css">
+    <link rel="shortcut icon" href="../assets/icono-alas-de-america.png">
+    <title>Cotización Transporte Aereo</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="../assets/icons8-aviones-64.png">
+            <h2>Alas De America</h2>
+        </div>
+        <nav>
+            <a href="MAZM_Menu_Principal.html" class="nav-link">Home</a>
+        </nav>
+    </header>
+    <center>
+            
+        <form action="../archivos_php/validacion_cotizacion_aerea.php" method="POST">
+            <h1>Formulario Transporte Aereo</h1>
+            <label for="">Tipo De Aeronave:</label>
+            <input type="text" name="tipo_aeronave">
+
+            <label for="">Placa:</label>
+            <input type="text" name="placa">
+            
+            <label for="">Capacidad De Pasajeros:</label>
+            <input type="text" name="capacidad_pasajeros">
+            
+            <label for="">Empresa Propietaria:</label>
+            <input type="text" name="empresa_propietaria">
+            
+            
+            <input type="submit" name="submit">
+        
+        </form>
+    </center>
+
+
+<!--
+
+        <form action="../archivos_php/validacion_cotizacion_aerea.php" method="POST">
+            <div class="formulario-registro">
+                <h4>DATOS DEL TIPO DE AERONAVE</h4>
+                <input class="controls" type="text" name="tipo_aeronave" placeholder="tipo_transporte">
+                <input class="controls" type="text" name="placa" placeholder="placa">
+                <input class="controls" type="text" name="capacidad_pasajeros" placeholder="capacidad_pasajeros">
+                <input class="controls" type="text" name="anio_fabricacion" placeholder="anio_fabricacion">
+                <input class="controls" type="text" name="empresa_propietaria" placeholder="empresa_propietaria">
+                <input class="botons" type="submit" value="Consultar">
+            </div>
+        </form>
+-->
+
+
+
+    </center>
+    </div>
+
+    <footer class="footer">
+
+        &copy; MAZM - PW1 - 2024 - 05 - 05
+    </footer>
+
+
+</body>
+
+</html>

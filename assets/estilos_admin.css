@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.formulario-registro{
+    display: contents;
+    justify-items: center;
+    width: 30%;
+    padding-top: 40px;
+    margin-right: 80px;
+    border-radius: 4px; 
+    font-family: 'calibri';
+    padding-bottom: 15%;
+}
+
+.formulario-registro h4 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+
+.controls{
+    width: 100%;
+    padding: 5px;
+    border-radius: 4px;
+    margin-bottom: 12px;
+    border: 1px solid;
+    font-family: 'calibri';
+    font-size: 18px;
+}
+
+
+
+.botonsAlta{
+    width: 100%;
+    border: none;
+    padding-top: 5%;
+    padding: 10px;
+    margin: 16px 5;
+    font-size: 16px;
+    color: white;
+    background: #1f53c5;
+}
+
+.botonsActualizar{
+    width: 100%;
+    border: none;
+    padding-top: 5%;
+    padding: 10px;
+    margin: 16px 5;
+    font-size: 16px;
+    color: white;
+    background: #82e09e;
+}
+
+.botonsEliminar{
+    width: 100%;
+    border: none;
+    padding-top: 5%;
+    padding: 10px;
+    margin: 16px 5;
+    font-size: 16px;
+    color: white;
+    background: #e22635;
+}
+
+
+.footer {
+    background-color: rgb(144, 169, 218);
+    padding: 1em 0%;
+    text-align: left;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+   
+}
+
+
+
+header {
+    display: flex;
+    height: 70px;
+    background-color: rgb(144, 169, 218);
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.contenedor {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+    font-size: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+nav a {
+    font-weight: 600;
+    padding-right: 10px;
+}
+
+nav a:hover {
+    color: white;
+}
+
+.error {
+    color: red;
+  }
+
+

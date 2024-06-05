@@ -1,0 +1,123 @@
+<?php
+
+
+$nombre = "Mario";
+$apellido_paterno = "Zamora";// $_POST['apellido_paterno'];
+$apellido_materno = "Martinez"; //$_POST['apellido_materno'];
+$fecha_registro =  "1975-06-18";//$_POST['fecha_nacimiento'];
+$validacion_fecha = date("Y-m-d", strtotime($fecha_registro));
+$entidad_federativa = "DF";//$_POST['entidad_federativa'];
+$curp ="ZAMM750618HDFMRR06";// $_POST['curp'];
+$rfc = "ZAMM750618A5A";//$_POST['rfc'];
+$sexo = "H";//$_POST['sexoHM'];
+
+
+
+if(isset($_POST['submit'])){
+    
+    if(empty($nombre)){
+      echo "<p class='error'>* Falta agregar el nombre del cliente</p>";            
+    }
+
+    if(is_numeric($nombre) || is_numeric($apellido_paterno) || is_numeric($apellido_materno)){
+      echo "<p class='error'>* Los campos de nombre, apellido Paterno y apellido Materno deberan ser de texto</p>";
+    }
+  }
+
+  if(isset($_POST['submit'])){
+    if(empty($apellido_paterno)){
+      echo "<p class='error'>* Agrega el apellido paterno</p>";            
+    }
+  }
+
+  if(isset($_POST['submit'])){
+    if(empty($apellido_materno)){
+      echo "<p class='error'>* Agrega el apellido materno</p>";            
+    }
+  }
+
+  if(isset($_POST['submit'])){
+    if(empty($fecha_registro)){
+      echo "<p class='error'>* Falta agregar la fecha de nacimiento</p>";            
+    } else if($fecha_registro != $validacion_fecha ){
+       echo "<p class='error'>* La fecha de nacimiento no esta especificada en el formato correcto (YYYY/MM/DD) </p>";
+    }
+  }
+
+
+  if(isset($_POST['submit'])){
+    if(empty($entidad_federativa)){
+       echo "<p class='error'>* Falta agregar entidad federativa</p>";
+    } else if(strlen($entidad_federativa) < 2 || strlen($entidad_federativa) > 2 ){
+      echo "<p class='error'>*La entidad federativa solo debe tener 2 caracteres</p>";
+    }
+
+  }
+
+  if(isset($_POST['submit'])){
+    if(empty($sexo)){
+      echo "<p class='error'>*Falta agregar el genero sexual del usuario</p>";
+    } else if(strlen($sexo)<1 || strlen($sexo)>1){
+      echo "<p class='error'>* El genero sexual del usuario debera ser H = Hombre ó M = Mujer</p>";
+    }
+  }
+
+
+
+  if(isset($_POST['submit'])){
+    if(empty($curp)){
+      echo "<p class='error'>* Se requiere agregar el CURP</p>";            
+    }
+    if(strlen($curp) < 18 || strlen($curp) > 18){
+        echo "<p class='error'>* La cantidad de digitos para el curp debe constar solo de 18 caracteres </p>";
+    } else if(strlen($curp) == 18){
+      header("Location: ../archivos_html/MAZM_Pag_Mantenimiento.html");
+    }
+  }
+
+  if(isset($_POST['submit'])){
+    if(empty($rfc)){
+      echo "<p class='error'>* Se requiere agregar el RFC</p>";            
+    } else if(strlen($rfc) > 13 || strlen($rfc) < 13 ){
+        echo "<p class='error'>* El RFC debera tener exactamente 13 caracteres</p>";            
+      }      
+  } 
+
+  if(array_key_exists('buttonAlta', $_POST)) { 
+    registrar_usuario($nombre, $apellido_paterno, $apellido_materno, $fecha_registro, $entidad_federativa,$curp, $rfc, $sexo); 
+ } 
+
+ function registrar_usuario(
+  $arg1,
+  $arg2,
+  $arg3,
+  $arg4,
+  $arg5,
+  $arg6,
+  $arg7,
+  $arg8){
+  $dbhost = "localhost";
+  $dbuser = "root";
+  $dbpass = "#Cu213lona1993";
+  $dbname = "dpw1_u2_a1_mazm";
+    
+  $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+
+  $query = "INSERT INTO tblcliente(nombre, primer_apellido, segundo_apellido, fecha_registro, rfc_cliente,CURP_cliente,entidad_federativa, sexo, id_usuario)
+            VALUES(nombre='Mario', primer_apellido='Zamora', segundo_apellido='Martinez', fecha_registro='1975-06-18', rfc_cliente='ZAMM750618A5A', CURP_cliente='ZAMM750618HDFMRR06', entidad_federativa='df', sexo='h', id_usuario='1')";
+  $stmt = mysqli_prepare($conn, $query);
+
+  mysqli_stmt_execute($stmt);
+  
+  $query_registrar = mysqli_stmt_affected_rows($stmt);  
+
+  
+  if($query_registrar == true){
+    echo "Registro ingresado exitosamente en la base de datos";
+  } else {
+    die("No fue posible ingresar el registro en la base de datos".mysqli_connect_error());
+  }
+
+ } 
+
+?>
