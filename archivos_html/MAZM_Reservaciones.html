@@ -24,19 +24,17 @@
     
 <div class="formulario-registro">
     <section>
-    <form action="../archivos_php/validacion_datos_cliente.php" method="POST">
+    <form action="../archivos_php/registrar_cliente.php" method="post">
         <h4>DATOS DE LA RESERVACIÓN</h4>
-        <input id="nombre" class="controls" type="text" name="fila[nombre]"  placeholder="nombre(s)" >
+        <input id="nombre" class="controls" type="text" name="nombre"  placeholder="nombre(s)" >
         <input id="vocalApellidoPaterno" class="controls" type="text" name="apellido_paterno"  placeholder="apellido_paterno" >
         <input id="vocalApellidoMaterno" class="controls" type="text" name="apellido_materno" placeholder="apellido_materno" >
         <input id="fechaNac" class="controls" type="text" name="fecha_nacimiento"  placeholder="fecha_nacimiento" >
         <input id="entFed" class="controls" type="text" name="entidad_federativa"  placeholder="entidad_federativa" >
         <input id="sexo" class="controls" type="text" name="sexoHM"  placeholder="sexo" >
         <input class="controls" type="text" name="rfc" placeholder="rfc" >
-        <input id="miInput" href="../archivos_html/MAZM_Pag_Mantenimiento.html" onclick="setearMensaje();" class="controls" type="text" name="curp" placeholder="curp">
-        
-
-        <input class="botonsAlta" type="submit" name="buttonAlta">
+        <input id="miInput" onclick="setearMensaje();" class="controls" type="text" name="curp" placeholder="curp">
+        <input class="botonsAlta" type="submit" value="Registrar">
     </form>
     </section>    
 </div>    
