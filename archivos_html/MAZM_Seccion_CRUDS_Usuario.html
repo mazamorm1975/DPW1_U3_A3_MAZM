@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -22,18 +22,23 @@
 
     <div class="formulario-registro">
         <section>
+        <form action="../archivos_php/MAZM_registro_datos_admin.php"  method="POST">
             <h4>FORMULARIO ALTA USUARIOS</h4>
-            <input class="controls" type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombres">
-            <input class="controls" name="apellidoM" id="apellidoM" placeholder="Apellido Materno">
-            <input class="controls" name="apellidoP" id="apellidoP" placeholder="Apellido Paterno">
-            <input class="controls" type="text" name="direccion" id="direccion" placeholder="Dirección">
-            <input class="controls" type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombres">
-            <input class="controls" name="apellidoM" id="apellidoM" placeholder="Apellido Materno">
- 
-                <input class="botonsAlta" type="submit" value="Registrar" name="botonAltaUsuario" class="button">
-                <input class="botonsActualizar" type="submit" value="Actualizar">
-                <input class="botonsEliminar" type="submit" value="Eliminar">
- 
+            <input class="controls" type="text" name="id_usuario" placeholder="id_usuario">
+            <input id="nombre" class="controls" type="text" name="nombre_usuario" placeholder="nombre(s)">
+            <input class="controls" type="text" name="LDAP_usuario"  placeholder="LDAP">
+            <input class="controls" type="text" name="contrasena" placeholder="contraseña">
+            <input class="controls" type="text" name="id_categoria" placeholder="categoria">
+            
+            <input class="botonsAlta" type="submit" value="Registrar" name="registrar">
+            <input class="botonsActualizar" type="submit" value="Actualizar" name="actualizar">
+            <input class="botonsEliminar" type="submit" value="Eliminar" name="eliminar">    
+           
+            <nav class="botonsAlta">
+            
+            <a style="display: center;" href="../archivos_html/MAZM_Consultar_Registro.html">Consultar</a>
+            </nav>
+        </form>
         </section>
                     
        

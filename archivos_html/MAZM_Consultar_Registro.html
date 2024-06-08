@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/estilos_admin.css">
+    <link rel="shortcut icon" href="../assets/images/icono-alas-de-america.png">
+    <title>Consulta Usuario</title>
+</head>
+<body>
+<header>
+        <div class="logo">
+            <img src="../assets/images/icons8-aviones-64.png">
+            <h2>Alas De America</h2>
+        </div>
+        <nav>
+        <a href="MAZM_Seccion_CRUDS_Usuario.html" class="nav-link">Modulo De Administrador</a>
+            <a href="MAZM_Login.html" class="nav-link">Salir</a>
+        </nav>
+    </header>
+
+<div class="formulario-registro">
+        <section>
+            <form action="../archivos_php/MAZM_consulta_usuario.php" method="POST">
+                <h4>MODULO DE CONSULTA POR ID DE USUARIO</h4>
+                <input id="id_usuario" class="controls" type="text" name="id_usuario" placeholder="id_usuario">
+                <input class="botonsAlta" type="submit" name="registrar" value="Iniciar Consulta">
+            </form>
+
+</body>
+</html>

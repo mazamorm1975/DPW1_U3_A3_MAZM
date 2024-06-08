@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +9,8 @@
     <link rel="shortcut icon" href="../assets/images/icono-alas-de-america.png">
     <title>Reservaciones</title>
 </head>
-<body>
-   
-    
 
+<body>
     <header>
         <div class="logo">
             <img src="../assets/images/icons8-aviones-64.png">
@@ -21,23 +20,29 @@
             <a href="MAZM_Menu_Principal.html" class="nav-link">Home</a>
         </nav>
     </header>
-    
-<div class="formulario-registro">
-    <section>
-    <form action="../archivos_php/registrar_cliente.php" method="post">
-        <h4>DATOS DE LA RESERVACIÓN</h4>
-        <input id="nombre" class="controls" type="text" name="nombre"  placeholder="nombre(s)" >
-        <input id="vocalApellidoPaterno" class="controls" type="text" name="apellido_paterno"  placeholder="apellido_paterno" >
-        <input id="vocalApellidoMaterno" class="controls" type="text" name="apellido_materno" placeholder="apellido_materno" >
-        <input id="fechaNac" class="controls" type="text" name="fecha_nacimiento"  placeholder="fecha_nacimiento" >
-        <input id="entFed" class="controls" type="text" name="entidad_federativa"  placeholder="entidad_federativa" >
-        <input id="sexo" class="controls" type="text" name="sexoHM"  placeholder="sexo" >
-        <input class="controls" type="text" name="rfc" placeholder="rfc" >
-        <input id="miInput" onclick="setearMensaje();" class="controls" type="text" name="curp" placeholder="curp">
-        <input class="botonsAlta" type="submit" value="Registrar">
-    </form>
-    </section>    
-</div>    
+
+    <div class="formulario-registro">
+        <section>
+            <form action="../archivos_php/validacion_datos_cliente.php" method="POST">
+                <h4>DATOS DE LA RESERVACIÓN</h4>
+                <input id="nombre" class="controls" type="text" name="nombre" placeholder="nombre(s)">
+                <input id="vocalApellidoPaterno" class="controls" type="text" name="apellido_paterno"
+                    placeholder="apellido_paterno">
+                <input id="vocalApellidoMaterno" class="controls" type="text" name="apellido_materno"
+                    placeholder="apellido_materno">
+                <input id="fechaNac" class="controls" type="text" name="fecha_nacimiento"
+                    placeholder="fecha_nacimiento">
+                <input id="entFed" class="controls" type="text" name="entidad_federativa"
+                    placeholder="entidad_federativa">
+                <input id="sexo" class="controls" type="text" name="sexoHM" placeholder="sexo">
+                <input class="controls" type="text" name="rfc" placeholder="rfc">
+                <input id="miInput" onclick="setearMensaje();" class="controls" type="text" name="curp"
+                    placeholder="curp">
+                <input class="botonsAlta" type="submit" name="registrar" value="Registrar">
+            </form>
+
+        </section>
+    </div>
     <footer class="footer">
 
         &copy; MAZM - PW1 - 2024 - 05 - 05
@@ -45,4 +50,5 @@
 
     <script src="../assets/archivos_js/curp.js"></script>
 </body>
+
 </html>

@@ -15,6 +15,7 @@
  *login_usuario que se encarga de verificar el LDAP,la contraseña y tipo de usuario ya sea cliente
  *o administrador en la base de datos
  */
+
  if(array_key_exists('button1', $_POST)) { 
    login_usuario($nombre, $password, $conn); 
 } 
@@ -62,4 +63,7 @@ if($nombre == 'admin_ZMM' && $password == 'ES1821008613'){
      echo "No se encontro a este usuario en la base de datos";
   }
 */
+
+  
+
 ?>
