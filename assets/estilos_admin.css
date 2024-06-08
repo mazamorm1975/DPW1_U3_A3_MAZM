@@ -34,6 +34,8 @@
 
 
 .botonsAlta{
+
+    justify-content: center;
     width: 100%;
     border: none;
     padding-top: 5%;
@@ -122,4 +124,7 @@ nav a:hover {
     color: red;
   }
 
-
+.formulario_cot_aerea{
+    display: inline-block;
+    justify-content: left;
+}

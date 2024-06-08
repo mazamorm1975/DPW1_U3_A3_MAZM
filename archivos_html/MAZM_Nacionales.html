@@ -4,81 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/estilos.css">
-    <link rel="shortcut icon" href="../assets/icono-alas-de-america.png">
+    <link rel="stylesheet" href="../assets/estilos_admin.css">
+    <link rel="shortcut icon" href="../assets/images/icono-alas-de-america.png">
     <title>Destinos Nacionales</title>
 </head>
 
 <body>
     <header>
         <div class="logo">
-            <img src="../assets/icons8-aviones-64.png">
+            <img src="../assets/images/icons8-aviones-64.png">
             <h2>Alas De America</h2>
         </div>
         <nav>
             <a href="MAZM_Menu_Principal.html" class="nav-link">Home</a>
         </nav>
-
-
     </header>
-    <div class="contenedor">
-        <table>
+    
+    <div class="formulario-registro">
+        <section>
+            <form action="../archivos_php/validacion_destinos_nacionales.php" method="POST">
+                <h4>FORMULARIO_DATOS_DESTINO</h4>
+                <input id="nombre_destino" class="controls" type="text" name="nombre_destino" placeholder="Destino">
+                <input id="actividades_populares" class="controls" type="text" name="actividades_populares" placeholder="Actividades Populares">
+                <input id="epoca_sugerida" class="controls" type="text" name="epoca_sugerida" placeholder="Epoca Sugerida">
 
-            <thead>
+                <input class="botonsAlta" type="submit" name="registrar" value="Registrar">
+                <input class="botonsActualizar" type="submit" name="actualizar" value="Actualizar">
+                <input class="botonsEliminar" type="submit" name="eliminar" value="Eliminar">
+            </form>
 
-                <tr>
-                    <th>Lugar</th>
-                    <th>Estado</th>
-                    <th>Zona</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Tlalixcoyan</td>
-                    <td>Veracruz</td>
-                    <td>Sur</td>
-                </tr>
-
-                <tr>
-                    <td>Tlalixcoyan</td>
-                    <td>Veracruz</td>
-                    <td>Sur</td>
-                </tr>
-
-                <tr>
-                    <td>Tlalixcoyan</td>
-                    <td>Veracruz</td>
-                    <td>Sur</td>
-                </tr>
-
-                <tr>
-                    <td>Tlalixcoyan</td>
-                    <td>Veracruz</td>
-                    <td>Sur</td>
-                </tr>
-
-                <tr>
-                    <td>Tlalixcoyan</td>
-                    <td>Veracruz</td>
-                    <td>Sur</td>
-                </tr>
-
-                <tr>
-                    <td>Tlalixcoyan</td>
-                    <td>Veracruz</td>
-                    <td>Sur</td>
-                </tr>
-
-                <tr>
-                    <td>Tlalixcoyan</td>
-                    <td>Veracruz</td>
-                    <td>Sur</td>
-                </tr>
-
-            </tbody>
-
-        </table>
+        </section>
     </div>
+
+
     <footer class="footer">
 
         &copy; MAZM - PW1 - 2024 - 05 - 05
