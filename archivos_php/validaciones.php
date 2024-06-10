@@ -1,5 +1,5 @@
 <?php
-    
+  
 //Bloque para validación de entrada de datos en formulario transporte aereo    
 function MAZM_validacion_datos_transporte_aereo($arg1, $arg2, $arg3, $arg4){
     
@@ -419,11 +419,11 @@ if(isset($_POST['actualizar'])){
    //function consulta_datos_usuario($arg1){
 function MAZM_consulta_datos_usuario($arg1){
 
-if(isset($_POST['id_usuario'])){
+if(isset($_POST['LDAP_usuario'])){
    
     $conn = mysqli_connect("localhost", "root", "#Cu213lona1993", "dpw1_u2_a1_mazm");
 
-    $query_admin = mysqli_query($conn, "SELECT * FROM usuario WHERE id_usuario = '$arg1' ");
+    $query_admin = mysqli_query($conn, "SELECT * FROM usuario WHERE LDAP_Usuario = '$arg1'");
         
     if(mysqli_num_rows($query_admin) > 0){
 
@@ -432,7 +432,7 @@ if(isset($_POST['id_usuario'])){
             $nombre_usuario = $row['nombre_usuario'];
             $ldap_usuario = $row['LDAP_Usuario'];
             $contrasena = $row['contrasena'];
-            $id_usuario = $row['id_usuario'];
+            $id_usuario = $row['id_categoria_usuario'];
             
             echo "Nombre_Usuario:     ", "$nombre_usuario<br>";
             echo "LDAP:     ","$ldap_usuario<br>";
@@ -534,7 +534,7 @@ function MAZM_actualizar_datos_admin($arg1,$arg2,$arg3,$arg4){
     
 }
 
-function MAZM_eliminacion_datos_admin($arg1){
+function MAZM_eliminacion_datos_admin($arg3){
 
   //Borrado del registro
   if(isset($_POST['eliminar'])){
@@ -555,4 +555,150 @@ function MAZM_eliminacion_datos_admin($arg1){
  }
 
 
+ function MAZM_validacion_datos_destinos_nacionales($arg1,$arg2,$arg3){
+ 
+    if(empty($arg1)){
+      echo "<p class='error'>* Agrega el nombre del destino</p>";            
+    
+}
+
+    if(empty($arg2)){
+      echo "<p class='error'>* Falto agregar la actividad popular</p>";            
+    }
+
+
+  if(empty($arg3)){
+    echo "<p class='error'>* Falta agregar la epoca sugerida</p>";            
+  
+  }
+}
+
+function MAZM_insertar_datos_nacionales($arg1,$arg2,$arg3){
+
+  
+  if(isset($_POST['registrar'])){
+
+    if((empty($arg1)) ||
+       empty($arg2) ||
+       empty($arg3)){
+
+       echo "<p class='error'>*Algun dato no fue ingresado correctamente o esta vacio. Favor de verificar. Gracias</p>";
+              
+  } else {
+    
+    $conn = mysqli_connect("localhost", "root", "#Cu213lona1993", "dpw1_u2_a1_mazm");
+    
+    $consulta = "INSERT INTO tbltipodestino(Nombre_destino, Actividades_populares, Epoca_sugerida) 
+                 VALUES('$arg1','$arg2','$arg3')";
+  
+    $resultado = mysqli_query($conn,$consulta);
+  
+    if($resultado){
+      echo "Registro ingresado exitosamente en la base de datos";
+    } else {
+      echo "No fue posible ingresar el registro en la base de datos";
+    }
+    mysqli_close($conn);   
+
+  }
+
+}
+
+}
+
+function MAZM_validacion_datos_destinos($arg1,$arg2,$arg3,$arg4,$arg5,$arg6,$arg7,$arg8,$arg9){
+
+   
+  if(empty($arg1)){
+    echo "<p class='error'>* Falta ingresar el tipoDestino</p>";            
+  
+}
+
+  if(empty($arg2)){
+    echo "<p class='error'>* Falto agregar el id Avion 1</p>";            
+  }
+
+
+if(empty($arg3)){
+  echo "<p class='error'>* Falto agregar el id Avion 2</p>";           
+
+}
+
+if(empty($arg4)){
+  echo "<p class='error'>* Falto agregar el id de transporte terrestre 1</p>";           
+
+}
+
+if(empty($arg5)){
+  echo "<p class='error'>* Falto agregar el id de transporte terrestre 2</p>";           
+
+}
+
+
+if(empty($arg6)){
+  echo "<p class='error'>* Falto agregar el pais</p>";           
+
+}
+
+
+if(empty($arg7)){
+  echo "<p class='error'>* Falto agregar la reseña</p>";           
+
+}
+
+
+if(empty($arg8)){
+  echo "<p class='error'>* Falto agregar las coordenadas</p>";           
+
+}
+
+if(empty($arg9)){
+  echo "<p class='error'>* Falto agregar la imagen</p>";           
+
+}
+
+}
+ 
+function MAZM_insercion_datos_destinos($arg1,$arg2,$arg3,$arg4,$arg5,$arg6,$arg7,$arg8, $arg9){
+
+  /*   
+
+ //$arg1,$arg2,$arg3,$arg4,$arg5,$arg6,$arg7,$arg8
+  if(isset($_POST['enviar'])){
+
+    if(empty($arg1) ||
+       empty($arg2) ||
+       empty($arg3) ||
+       empty($arg4) ||
+       empty($arg5) ||
+       empty($arg6) ||
+       empty($arg7) ||
+       empty($arg8) ||
+       empty($arg9) ||
+       empty($arg2) ||
+       empty($arg3)){
+
+       echo "<p class='error'>*Algun dato no fue ingresado correctamente o esta vacio. Favor de verificar. Gracias</p>";
+              
+  } else {
+    
+    $conn = mysqli_connect("localhost", "root", "#Cu213lona1993", "dpw1_u2_a1_mazm");
+    
+    $consulta = "INSERT INTO tbldestino(id_tipodestino, id_avion1, id_avion2, id_transpterrestre1, id_transpterrestre2, pais, resena, coordenadas, imagen) 
+                 VALUES($arg1,$arg2,$arg3,$arg4,$arg5,'$arg6','$arg7','$arg8',$imagenFoto)";
+  
+    $resultado = mysqli_query($conn,$consulta);
+  
+    if($resultado){
+      echo "Registro ingresado exitosamente en la base de datos";
+    } else {
+      echo "No fue posible ingresar el registro en la base de datos";
+    }
+    mysqli_close($conn);   
+
+  }
+  }
+*/
+
+}
  ?>

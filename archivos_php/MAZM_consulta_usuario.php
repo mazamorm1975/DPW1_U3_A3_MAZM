@@ -1,11 +1,11 @@
 <?php
     include "validaciones.php";
 
-    $id_usuario = $_POST['id_usuario'];
+    $LDAP_usuario = $_POST['LDAP_usuario'];
 
-   if(isset($_POST['registrar'])){
+   if(isset($_POST['consultar'])){
 
-    MAZM_consulta_datos_usuario($id_usuario);
+    MAZM_consulta_datos_usuario($LDAP_usuario);
   
 }
     
