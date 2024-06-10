@@ -1,15 +1,14 @@
 <?php
-  //Cabecera de variables para entablar conexión con la base de datos.
- $dbhost = "localhost";
- $dbuser = "root";
- $dbpass = "#Cu213lona1993";
- $dbname = "dpw1_u2_a1_mazm";
+ 
+ require("conexion.php");
+
  $nombre = $_POST["txtusuario"];
  $password = $_POST["txtpassword"];
  $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
  if(!$conn){
     die("La conexion fue rechazada".mysqli_connect_error());
  }
+
  
  /*función que verifica si existe un indice dentro del arreglo, si existe manda llamar a la función
  *login_usuario que se encarga de verificar el LDAP,la contraseña y tipo de usuario ya sea cliente

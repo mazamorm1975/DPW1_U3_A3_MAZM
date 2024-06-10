@@ -63,12 +63,15 @@ header {
 }
 
 .destinos{
-    display: contents;
+    
+    padding-left: 5px;
+    padding-bottom: 5%;
     justify-items: flex-end;    
     margin-top: 10%;
  }
 
  nav .destinos:hover{
+    display: inline-block;
     color: white;
  }
 
@@ -80,6 +83,10 @@ nav #destinos:hover{
      margin-top: 10px;
      width: 100%;
              
+}
+
+.alinear{
+    margin-left: 5%;
 }
 
 #user-name{

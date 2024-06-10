@@ -4,15 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/estilos.css">
-    <link rel="shortcut icon" href="../assets/icono-alas-de-america.png">
+    <link rel="stylesheet" href="../assets/estilos_admin.css">
+    <link rel="shortcut icon" href="../assets/images/icono-alas-de-america.png">
     <title>Destinos Internacionales</title>
 </head>
 
 <body>
     <header>
         <div class="logo">
-            <img src="../assets/icons8-aviones-64.png">
+            <img src="../assets/images/icons8-aviones-64.png">
             <h2>Alas De America</h2>
         </div>
         <nav>
@@ -21,60 +21,21 @@
 
     </header>
 
-    <div class="contenedor">
-        <table>
+    
+    <div class="formulario-registro">
+        <section>
+            <form action="../archivos_php/validacion_destinos.php" method="POST">
+                <h4>FORMULARIO_DATOS_DESTINOS_INTERNACIONALES</h4>
+                <input  class="controls" type="text" name="nombre_destino" placeholder="Destino">
+                <input  class="controls" type="text" name="actividades_populares" placeholder="Actividades Populares">
+                <input  class="controls" type="text" name="epoca_sugerida" placeholder="Epoca Sugerida">
+                <input  class="botonsAlta" type="submit" name="registrar" value="Registrar">
+             
+            </form>
 
-            <thead>
-
-                <tr>
-                    <th>Lugar</th>
-                    <th>Pais</th>
-                    <th>Estado</th>
-                    <th>Region Geografica</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Maryland</td>
-                    <td>Estados Unidos</td>
-                    <td>Georgia</td>
-                    <td>West</td>
-                </tr>
-                <tr>
-                    <td>Maryland</td>
-                    <td>Estados Unidos</td>
-                    <td>Georgia</td>
-                    <td>West</td>
-                </tr>
-                <tr>
-                    <td>Maryland</td>
-                    <td>Estados Unidos</td>
-                    <td>Georgia</td>
-                    <td>West</td>
-                </tr>
-                <tr>
-                    <td>Maryland</td>
-                    <td>Estados Unidos</td>
-                    <td>Georgia</td>
-                    <td>West</td>
-                </tr>
-                <tr>
-                    <td>Maryland</td>
-                    <td>Estados Unidos</td>
-                    <td>Georgia</td>
-                    <td>West</td>
-                </tr>
-                <tr>
-                    <td>Maryland</td>
-                    <td>Estados Unidos</td>
-                    <td>Georgia</td>
-                    <td>West</td>
-                </tr>
-
-            </tbody>
-
-        </table>
+        </section>
     </div>
+
     <footer class="footer">
 
         &copy; MAZM - PW1 - 2024 - 05 - 05

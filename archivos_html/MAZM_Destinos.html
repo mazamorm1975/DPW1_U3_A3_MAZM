@@ -5,22 +5,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/estilos.css">
-    <link rel="shortcut icon" href="../assets/icono-alas-de-america.png">
+    <link rel="shortcut icon" href="../assets/images/icono-alas-de-america.png">
     <title>Destinos</title>
 </head>
 
 <body>
     <header>
         <div class="logo">
-            <img src="../assets/icons8-aviones-64.png">
+            <img src="../assets/images/icons8-aviones-64.png">
             <h2>Alas De America</h2>
         </div>
+        <nav>
+        <div id="destinos">
+        <a href="MAZM_Nacionales.html">Nacionales</a>
+        <a href="MAZM_Internacionales.html">Internacionales</a>
+        <a href="MAZM_Menu_Principal.html" class="nav-link">Home</a>
+        </div>
+    </nav>
     </header>
-    <div id="destinos">
-        <h1><a href="MAZM_Nacionales.html">Nacionales</a></h1>
-        <h1><a href="MAZM_Internacionales.html">Internacionales</a></h1>
-    </div>
-    <footer class="footer">
+   
+    <form class="alinear" action="../archivos_php/validacion_tipos_destino.php" method="POST" enctype="multipart/form-data">
+     
+        <h1>Formulario Destinos</h1>
+        <label for="">Tipo Destino:</label>
+        <input type="text" name="tipo_destino" placeholder=" Nacional / Internacional">
+        <label for="">Id Avion 1:</label>
+        <input type="text" name="avion1">
+        <label for="">Id Avion 2:</label>
+        <input type="text" name="avion2">
+        <label for="">Id Transporte terrestre 1:</label>
+        <input type="text" name="transporte1">
+        <br>
+        <br>
+        <label for="">Id Transporte terrestre 2:</label>
+        <input type="text" name="transporte2">
+        <label for="">Pais:</label>
+        <input type="text" name="pais">
+        <label for="">Reseña:</label>
+        <input type="text" name="resena">
+        <label for="">Coordenadas:</label>
+        <input type="text" name="coordenadas">
+        <br>
+        <br>
+        <label for="imagen">Archivo Imagen</label>
+        <input type="file" name="imagen" enctype="multipart/form-data">
+        <br>
+        <br>
+        <br>
+        <input  style="width: 30%; height: 30px; display: inline-block;" type="submit" name="enviar" value="Enviar">
+        <input  style="width: 30%; height: 30px; display: inline-block;" type="submit" name="actualizar" value="Actualizar">
+        <input  style="width: 30%; height: 30px; display: inline-block;" type="submit" name="eliminar" value="Eliminar">  
+    </form>
+    <br>
+    <br>
+
+   
+   
+        <footer class="footer">
         
         &copy; MAZM - PW1 - 2024 - 05 - 05
 </footer>

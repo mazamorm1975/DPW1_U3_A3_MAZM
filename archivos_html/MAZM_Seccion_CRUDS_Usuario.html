@@ -16,6 +16,7 @@
             <h2>Alas De America</h2>
         </div>
         <nav>
+        <a  href="MAZM_Consultar_Registro.html">Consultar</a>
             <a href="MAZM_Login.html" class="nav-link">Salir</a>
         </nav>
     </header>
@@ -24,20 +25,17 @@
         <section>
         <form action="../archivos_php/MAZM_registro_datos_admin.php"  method="POST">
             <h4>FORMULARIO ALTA USUARIOS</h4>
-            <input class="controls" type="text" name="id_usuario" placeholder="id_usuario">
-            <input id="nombre" class="controls" type="text" name="nombre_usuario" placeholder="nombre(s)">
+          
+            <input class="controls" type="text" name="nombre_usuario" placeholder="nombre(s)">
             <input class="controls" type="text" name="LDAP_usuario"  placeholder="LDAP">
             <input class="controls" type="text" name="contrasena" placeholder="contraseña">
             <input class="controls" type="text" name="id_categoria" placeholder="categoria">
-            
-            <input class="botonsAlta" type="submit" value="Registrar" name="registrar">
-            <input class="botonsActualizar" type="submit" value="Actualizar" name="actualizar">
-            <input class="botonsEliminar" type="submit" value="Eliminar" name="eliminar">    
+                           
            
-            <nav class="botonsAlta">
-            
-            <a style="display: center;" href="../archivos_html/MAZM_Consultar_Registro.html">Consultar</a>
-            </nav>
+            <input class="botonsAlta"  type="submit" value="Registrar" name="registrar">
+            <input class="botonsActualizar"  type="submit" value="Actualizar" name="actualizar">
+            <input class="botonsEliminar"  type="submit" value="Eliminar" name="eliminar">
+       
         </form>
         </section>
                     
