@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../assets/estilos_formulario_cot_aerea.css">
     <link rel="stylesheet" href="../assets/estilos_admin.css">
     <link rel="shortcut icon" href="../assets/images/icono-alas-de-america.png">
+
     <title>Cotización Transporte Aereo</title>
 </head>
 
@@ -23,25 +24,31 @@
     </header>
     <center>
 
-        <form  action="../archivos_php/validacion_cotizacion_aerea.php" method="POST">
-            <h1>Formulario Transporte Aereo</h1>
-            <label for="">No. De Serie:</label>
-            <input type="text" name="numero_serie">
+        <form action="../archivos_php/validacion_cotizacion_aerea.php" method="POST" onsubmit="validarFormulariosAereo();">
 
-            <label for="">Modelo:</label>
-            <input type="text" name="modelo">
+           <!-- <form action="../archivos_php/validacion_cotizacion_aerea.php" method="POST">-->
 
-            <label for="">Capacidad De Asientos:</label>
-            <input type="text" name="capacidad_asientos">
-            
-            <label for="">Empresa Propietaria:</label>
-            <input type="text" name="empresa_propietaria">
+                <h1>Formulario Transporte Aereo</h1>
+                <label for="">No. De Serie:</label>
+                <input id="numero_serie" type="text" name="numero_serie">
 
-            <input  style="width: 30%; height: 30px; display: inline-block;" type="submit" name="enviar" value="Enviar">
-            <input  style="width: 30%; height: 30px; display: inline-block;" type="submit" name="actualizar" value="Actualizar">
-            <input  style="width: 30%; height: 30px; display: inline-block;" type="submit" name="eliminar" value="Eliminar">
-            
-        </form>
+                <label for="">Modelo:</label>
+                <input id="modelo" type="text" name="modelo">
+
+                <label for="">Capacidad De Asientos:</label>
+                <input id="capacidad_asientos"  type="number" name="capacidad_asientos">
+
+                <label for="">Empresa Propietaria:</label>
+                <input id="empresa_propietaria" type="text" name="empresa_propietaria">
+
+                <input style="width: 30%; height: 30px; display: inline-block;" type="submit" name="enviar"
+                    value="Enviar">
+                <input style="width: 30%; height: 30px; display: inline-block;" type="submit" name="actualizar"
+                    value="Actualizar">
+                <input style="width: 30%; height: 30px; display: inline-block;" type="submit" name="eliminar"
+                    value="Eliminar">
+
+            </form>
     </center>
 
     </div>
@@ -50,7 +57,7 @@
 
         &copy; MAZM - PW1 - 2024 - 05 - 05
     </footer>
-
+    <script src="../assets/archivos_js/validaciones.js"></script>
 
 </body>
 

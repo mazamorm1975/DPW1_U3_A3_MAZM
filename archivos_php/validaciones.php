@@ -38,11 +38,10 @@ function MAZM_insertar_registro_tblavion($arg1,$arg2,$arg3,$arg4){
 
     if(isset($_POST['enviar'])){
 
-        if(empty($arg1) ||
+        if(empty($arg1) || $arg1 != 10 ||
            empty($arg2) ||
-           empty($arg3) || strlen($arg3) < 1 || strlen($arg3) > 80 ||
-           empty($arg4)
-           ){
+           empty($arg3) || $arg3 < 1 || $arg3 > 80 ||
+           empty($arg4)){
       
            echo "<p class='error'>*Algun dato no fue ingresado correctamente o esta vacio. Favor de verificar. Gracias</p>";
                   
@@ -57,14 +56,16 @@ function MAZM_insertar_registro_tblavion($arg1,$arg2,$arg3,$arg4){
           
         if($resultado){
           echo "Registro ingresado exitosamente en la base de datos";
-        } else {
+        } 
+      
+        else {
           echo "No fue posible ingresar el registro en la base de datos";
         }
         mysqli_close($conn); 
       }
-      }
-    
     }
+    
+   }
 
 function MAZM_actualizar_registro_tblavion($arg1,$arg2,$arg3,$arg4){
         

@@ -34,8 +34,8 @@ if(isset($_POST['enviar'])){
     if($tipo_imagen =="image/jpeg" || $tipo_imagen =="image/png" || $tipo_imagen =="image/gif") {  
 
     //Se define ubicación donde subir las imagenes en el servidor web
-    $carpeta_destino = $_SERVER['DOCUMENT_ROOT'].'/img/';  
-    
+    //$carpeta_destino = $_SERVER['DOCUMENT_ROOT'].'../assets/images/';  
+    $carpeta_destino = '../assets/images/';
 
     //Se mueve la imagen del directorio temporal al directorio escogido
     move_uploaded_file($_FILES['imagen']['tmp_name'] , $carpeta_destino.$archivo_imagen);
