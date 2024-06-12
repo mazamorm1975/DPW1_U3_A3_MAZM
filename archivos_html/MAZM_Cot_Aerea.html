@@ -24,9 +24,7 @@
     </header>
     <center>
 
-        <form action="../archivos_php/validacion_cotizacion_aerea.php" method="POST" onsubmit="validarFormulariosAereo();">
-
-           <!-- <form action="../archivos_php/validacion_cotizacion_aerea.php" method="POST">-->
+        <form action="../archivos_php/validacion_cotizacion_aerea.php" method="POST">
 
                 <h1>Formulario Transporte Aereo</h1>
                 <label for="">No. De Serie:</label>
@@ -42,7 +40,7 @@
                 <input id="empresa_propietaria" type="text" name="empresa_propietaria">
 
                 <input style="width: 30%; height: 30px; display: inline-block;" type="submit" name="enviar"
-                    value="Enviar">
+                    value="Enviar" onclick="validarFormulariosAereo();">
                 <input style="width: 30%; height: 30px; display: inline-block;" type="submit" name="actualizar"
                     value="Actualizar">
                 <input style="width: 30%; height: 30px; display: inline-block;" type="submit" name="eliminar"

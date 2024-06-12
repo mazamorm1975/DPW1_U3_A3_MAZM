@@ -11,7 +11,7 @@ $empresa_propietaria = $_POST['empresa_propietaria'];
 
 //Se invoka a función que valida si los campos NO estan vacios
 if(isset($_POST['enviar'])){
- // MAZM_validacion_datos_transporte_aereo($numero_serie, $modelo, $capacidad_asientos, $empresa_propietaria);
+  MAZM_validacion_datos_transporte_aereo($numero_serie, $modelo, $capacidad_asientos, $empresa_propietaria);
   MAZM_insertar_registro_tblavion($numero_serie,$modelo,$capacidad_asientos, $empresa_propietaria);
   
 }
