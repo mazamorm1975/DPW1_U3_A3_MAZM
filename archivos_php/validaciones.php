@@ -38,7 +38,7 @@ function MAZM_insertar_registro_tblavion($arg1,$arg2,$arg3,$arg4){
 
     if(isset($_POST['enviar'])){
 
-        if(empty($arg1) || $arg1 != 10 ||
+        if(empty($arg1) || 
            empty($arg2) ||
            empty($arg3) || $arg3 < 1 || $arg3 > 80 ||
            empty($arg4)){

@@ -24,12 +24,11 @@
         <section>
             <form action="../archivos_php/validacion_destinos.php" method="POST">
                 <h4>FORMULARIO_DATOS_DESTINOS_NACIONALES</h4>
-                <input  class="controls" type="text" name="nombre_destino" placeholder="Destino">
-                <input  class="controls" type="text" name="actividades_populares" placeholder="Actividades Populares">
-                <input  class="controls" type="text" name="epoca_sugerida" placeholder="Epoca Sugerida">
-
-                <input class="botonsAlta" type="submit" name="registrar" value="Registrar">
-             
+                <input id="nombre_destino" class="controls" type="text" name="nombre_destino" placeholder="Destino">
+                <input id="actividades_populares" class="controls" type="text" name="actividades_populares" placeholder="Actividades Populares">
+                <input  id="epoca_sugerida" class="controls" type="text" name="epoca_sugerida" placeholder="Epoca Sugerida">
+                <input class="botonsAlta" type="submit" name="registrar" value="Registrar" onclick="validarEpocaSugerida();">
+              
             </form>
 
         </section>
@@ -40,6 +39,8 @@
 
         &copy; MAZM - PW1 - 2024 - 05 - 05
     </footer>
+
+    <script src="../assets/archivos_js/validaciones.js"></script>
 </body>
 
 </html>
