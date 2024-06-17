@@ -86,7 +86,13 @@ nav #destinos:hover{
 }
 
 .alinear{
-    margin-left: 5%;
+    margin-left: 5;
+ 
+}
+
+.campo_imagen{
+  
+   margin-right: 5%;
 }
 
 #user-name{
