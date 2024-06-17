@@ -16,16 +16,17 @@
             <h2>Alas De America</h2>
         </div>
         <nav>
-        <div id="destinos">
-        <a href="MAZM_Nacionales.html">Nacionales</a>
-        <a href="MAZM_Internacionales.html">Internacionales</a>
-        <a href="MAZM_Menu_Principal.html" class="nav-link">Home</a>
-        </div>
-    </nav>
+            <div id="destinos">
+                <a href="MAZM_Nacionales.html">Nacionales</a>
+                <a href="MAZM_Internacionales.html">Internacionales</a>
+                <a href="MAZM_Menu_Principal.html" class="nav-link">Home</a>
+            </div>
+        </nav>
     </header>
-   
-    <form class="alinear" action="../archivos_php/validacion_tipos_destino.php" method="POST" enctype="multipart/form-data">
-     
+
+    <form class="alinear" action="../archivos_php/validacion_tipos_destino.php" method="POST"
+        enctype="multipart/form-data">
+
         <h1>Formulario Destinos</h1>
         <label for="">Tipo Destino:</label>
         <input type="text" name="tipo_destino" placeholder=" Nacional / Internacional">
@@ -46,25 +47,53 @@
         <label for="">Coordenadas:</label>
         <input type="text" name="coordenadas">
         <br>
+        <br>        
+        <label for="imagen" class="campo_imagen">Archivo Imagen</label>
+        <input id="imagenBD" style="width: 55%;" type="text" name="imagen">
         <br>
-        <label for="imagen">Archivo Imagen</label>
-        <input type="file" name="imagen" enctype="multipart/form-data">
         <br>
         <br>
-        <br>
-        <input  style="width: 30%; height: 30px; display: inline-block;" type="submit" name="enviar" value="Enviar">
-        <input  style="width: 30%; height: 30px; display: inline-block;" type="submit" name="actualizar" value="Actualizar">
-        <input  style="width: 30%; height: 30px; display: inline-block;" type="submit" name="eliminar" value="Eliminar">  
+        <input style="width: 30%; height: 30px; display: inline-block;" type="submit" name="enviar" value="Enviar">
+        <input style="width: 30%; height: 30px; display: inline-block;" type="submit" name="actualizar"
+            value="Actualizar">
+        <input style="width: 30%; height: 30px; display: inline-block;" type="submit" name="eliminar" value="Eliminar">
     </form>
     <br>
     <br>
+    <button id="upload_widget" style="width: 100%; height: 40px;" class="cloudinary-button">Da Click Para Subir Tu imagen</button>
 
-   
-   
-        <footer class="footer">
-        
+
+    
+    <script src="https://upload-widget.cloudinary.com/latest/global/all.js" type="text/javascript"></script>
+
+    <footer class="footer">
         &copy; MAZM - PW1 - 2024 - 05 - 05
-</footer>
+    </footer>
+
+    <!--A continuación se implementa subida de archivos de imagenes al servidor Cloudinary-->
+    <script>
+            var secureUrl;
+            const url = "";
+            var myWidget = cloudinary.createUploadWidget({
+                cloudName: 'marioz',
+                uploadPreset: 'upload_test_MZ'
+            }, (error, result) => {
+                if (!error && result && result.event === "success") {
+                    console.log('Done! Here is the image info: ', result.info);
+                secureUrl = result.info.secure_url;  
+                document.getElementById("imagenBD").value = secureUrl;          
+            }              
+            }            
+            )
+          
+
+            const test = document.getElementById("upload_widget").addEventListener("click", function () {
+            myWidget.open();
+               
+        }, false);     
+    
+    </script>
+
 </body>
 
 </html>
