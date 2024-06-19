@@ -662,9 +662,8 @@ if(empty($arg9)){
  
 function MAZM_insercion_datos_destinos($arg1,$arg2,$arg3,$arg4,$arg5,$arg6,$arg7,$arg8, $arg9){
 
-  /*   
-
- //$arg1,$arg2,$arg3,$arg4,$arg5,$arg6,$arg7,$arg8
+  
+ //Paso de parametros: $arg1,$arg2,$arg3,$arg4,$arg5,$arg6,$arg7,$arg8
   if(isset($_POST['enviar'])){
 
     if(empty($arg1) ||
@@ -675,9 +674,7 @@ function MAZM_insercion_datos_destinos($arg1,$arg2,$arg3,$arg4,$arg5,$arg6,$arg7
        empty($arg6) ||
        empty($arg7) ||
        empty($arg8) ||
-       empty($arg9) ||
-       empty($arg2) ||
-       empty($arg3)){
+       empty($arg9)){
 
        echo "<p class='error'>*Algun dato no fue ingresado correctamente o esta vacio. Favor de verificar. Gracias</p>";
               
@@ -685,8 +682,8 @@ function MAZM_insercion_datos_destinos($arg1,$arg2,$arg3,$arg4,$arg5,$arg6,$arg7
     
     $conn = mysqli_connect("localhost", "root", "#Cu213lona1993", "dpw1_u2_a1_mazm");
     
-    $consulta = "INSERT INTO tbldestino(id_tipodestino, id_avion1, id_avion2, id_transpterrestre1, id_transpterrestre2, pais, resena, coordenadas, imagen) 
-                 VALUES($arg1,$arg2,$arg3,$arg4,$arg5,'$arg6','$arg7','$arg8',$imagenFoto)";
+    $consulta = "INSERT INTO tbldestino(id_tipodestino, id_avion1, id_avion2, id_transpterrestre1, id_transpterrestre2, pais, resena, coordenadas, imagen_destino) 
+                 VALUES($arg1,$arg2,$arg3,$arg4,$arg5,'$arg6','$arg7','$arg8','$arg9')";
   
     $resultado = mysqli_query($conn,$consulta);
   
@@ -699,7 +696,7 @@ function MAZM_insercion_datos_destinos($arg1,$arg2,$arg3,$arg4,$arg5,$arg6,$arg7
 
   }
   }
-*/
+
 
 }
  ?>
